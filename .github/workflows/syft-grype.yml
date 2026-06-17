@@ -9,4 +9,4 @@ job:
     runs-on: self-hosted
     steps:
       - name: Dire bonjour
-      run: echo "Hello, GitHub Actions!"
+        run: echo "Hello, GitHub Actions!"
