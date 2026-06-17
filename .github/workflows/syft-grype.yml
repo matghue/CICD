@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
 
-job:
+jobs:
   syft:
     runs-on: self-hosted
     steps:
