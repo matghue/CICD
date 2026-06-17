@@ -1,0 +1,13 @@
+name: Syft & Grype
+
+on:
+  push:
+    branches: [main] //à changer en dev pour la vrai
+
+
+job:
+  syft:
+    runs-on: self-hosted
+    steps:
+      - name: Dire bonjour
+      run: echo "Hello, GitHub Actions!"
