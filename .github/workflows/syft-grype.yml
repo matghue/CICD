@@ -2,7 +2,7 @@ name: Syft & Grype
 
 on:
   push:
-  branches: [main]
+    branches: [main]
 
 job:
   syft:
