@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+RUN apt-get update && apt-get install -y curl wget
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["python", "app.py"]
