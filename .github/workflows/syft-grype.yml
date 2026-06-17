@@ -2,8 +2,7 @@ name: Syft & Grype
 
 on:
   push:
-    branches: [main] //à changer en dev pour la vrai
-
+  branches: [main]
 
 job:
   syft:
