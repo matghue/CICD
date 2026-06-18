@@ -30,4 +30,3 @@ jobs:
           args: >
             -Dsonar.projectKey=test-github-vps
             -Dsonar.projectName="Test Connexion GitHub"
-            -Dsonar.sources=cintafactory
