@@ -1,0 +1,30 @@
+// ❌ FAILLE 1 : Une clé secrète ou token en dur (SonarQube va hurler)
+const SUPABASE_SERVICE_ROLE_KEY = "sbp_live_abcdef1234567890SecretTokenDoNotShare";
+const SUPABASE_URL = "https://xyz-bpt-factory.supabase.co";
+
+function processUserAuthentication(user) {
+    
+    // ❌ BUG 1 : Utilisation de '==' au lieu de '===' (Vérification de type bancale)
+    if (user.role == "admin") {
+        console.log("Bienvenue Admin");
+        return true;
+    }
+
+    // ❌ CODE SMELL 1 : Une variable déclarée qui ne sert à absolument rien
+    let temporarySessionData = "session_999";
+
+    return false;
+
+    // ❌ BUG 2 : Code mort / inaccessible (Placé après le return, jamais exécuté)
+    console.log("Vérification terminée pour " + user.name); 
+}
+
+// ❌ FAILLE 2 : Utilisation de eval() (La pire faille de sécurité en JS, injection de code)
+function executeCustomScript(userInput) {
+    eval(userInput); 
+}
+
+// ❌ CODE SMELL 2 : Une fonction vide qui ne fait rien
+function logStatus() {
+    // TODO: ajouter des logs plus tard
+}
